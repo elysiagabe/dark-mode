@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Loader from './Loader';
 
 const CoinDetails = () => {
     const params = useParams();
@@ -19,7 +20,7 @@ const CoinDetails = () => {
       }, []);
 
     return (
-        !coin ? <div>Loading</div> :
+        !coin ? <Loader /> :
         <>
             <h2>{coin.name}</h2>
             <h3>Most recently valued at: {coin.tickers[0]["last"]}</h3>

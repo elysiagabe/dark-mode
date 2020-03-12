@@ -6,7 +6,9 @@ import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 import CoinDetails from './components/CoinDetails';
 
+
 import "./styles.scss";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
