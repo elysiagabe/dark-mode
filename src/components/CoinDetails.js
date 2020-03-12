@@ -4,13 +4,8 @@ import axios from 'axios';
 
 const CoinDetails = () => {
     const params = useParams();
-
     const [coin, setCoin] = useState();
 
-    
-    //console.log("I'm the params", params);
-
-    
     useEffect(() => {
         axios
           .get(
@@ -22,12 +17,6 @@ const CoinDetails = () => {
           })
           .catch(err => console.log(err));
       }, []);
-
-    //   console.log("Coin info here:", coin);
-
-    //   console.log("coin name:", coin.name)
-    //   console.log("coin description:", coin.description)
-    //   console.log("coin description.en:", coin && coin.description && coin.description.en)
 
     return (
         !coin ? <div>Loading</div> :
